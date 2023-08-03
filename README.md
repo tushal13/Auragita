@@ -30,9 +30,35 @@ Auragita is designed to be a comprehensive learning app for the Bhagavad Gita, p
 
 ## Screenshots
 
-![Screenshot 1](screenshots/screenshot1.png)
-![Screenshot 2](screenshots/screenshot2.png)
-![Screenshot 3](screenshots/screenshot3.png)
+
+
+<img src="https://github.com/tushal13/Auragita/assets/113960162/e80b0676-747a-4b32-a106-4965a11655f0" alt="Image" width="200">
+
+<img src="https://github.com/tushal13/Auragita/assets/113960162/9d4c0d5a-4e01-4e7b-b209-ba927c28ca93" alt="Image" width="200">
+
+<img src="https://github.com/tushal13/Auragita/assets/113960162/efca1dd7-6fb4-4a58-a5a6-35300b089217" alt="Image" width="200">
+
+<img src="https://github.com/tushal13/Auragita/assets/113960162/11ebe858-0397-43d4-8ba7-2b0e28732d16" alt="Image" width="200">
+
+<img src="https://github.com/tushal13/Auragita/assets/113960162/df0800d0-5975-4651-8951-79e85c402549" alt="Image" width="200">
+
+<img src="https://github.com/tushal13/Auragita/assets/113960162/7d87c8cf-1c40-456f-a9b8-d28d80982eca" alt="Image" width="200">
+
+<img src="https://github.com/tushal13/Auragita/assets/113960162/8268cf8a-571a-461e-8cba-b875492b9fe9" alt="Image" width="200">
+
+<img src="https://github.com/tushal13/Auragita/assets/113960162/4932f896-1116-4698-b32c-cbff6041aa68" alt="Image" width="200">
+
+<img src="https://github.com/tushal13/Auragita/assets/113960162/c4930b99-d3b1-41de-af89-0429bbf62e7e" alt="Image" width="200">
+
+<img src="https://github.com/tushal13/Auragita/assets/113960162/d6336bf4-fc2b-4b35-9acb-4a899827b23c" alt="Image" width="200">
+
+<img src="https://github.com/tushal13/Auragita/assets/113960162/f076ad95-15ff-457c-ace8-d7bf129ff705" alt="Image" width="200">
+
+<img src="(https://github.com/tushal13/Auragita/assets/113960162/e9d932ce-3342-43d1-8e92-889ea8544ce2" alt="Image" width="200">
+
+## Video
+
+https://github.com/tushal13/Auragita/assets/113960162/4c162c87-9739-4c4a-be7b-909e48426bdc
 
 ## Getting Started
 
@@ -56,7 +82,7 @@ Auragita relies on the following Flutter packages:
 
 Please ensure that you have the correct versions of these dependencies in your `pubspec.yaml` file:
 
-''Pub.yaml''
+ `pubspec.yaml` 
 
 dependencies:
   flutter:
