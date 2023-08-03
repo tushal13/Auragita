@@ -9,39 +9,56 @@ class BookmarkPage extends StatelessWidget {
     return Scaffold(
       body: Consumer<VerseController>(
         builder: (context, verseProvider, _) {
-          return Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: ListView.builder(
-              shrinkWrap: true,
-              physics: ClampingScrollPhysics(),
-              itemCount: verseProvider.allBookmark.length,
-              itemBuilder: (context, verseIndex) {
-                VerseModal verse = verseProvider.allBookmark[verseIndex];
-                return ListTile(
-                  leading: Text('${verse.id}'),
-                  title: Text(
-                    '${verse.title}',
-                    style: TextStyle(fontSize: 16.0),
-                  ),
-                  trailing: IconButton(
-                    icon: verseProvider.isBookmark(verse)
-                        ? Icon(Icons.bookmark_remove)
-                        : Icon(Icons.bookmark_added_outlined),
-                    onPressed: () {
-                      if (verseProvider.isBookmark(verse)) {
-                        verseProvider.removeFromBookmark(index: verseIndex);
-                      } else {
-                        verseProvider.addToBookmark(verse: verse);
-                      }
+          return Stack(
+            children: [
+              Container(
+                  height: double.infinity,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: NetworkImage(
+                            'https://m.media-amazon.com/images/I/71K3sdQyfzL._AC_UF1000,1000_QL80_.jpg',
+                          ),
+                          fit: BoxFit.fill,
+                          opacity: 0.5))),
+              ListView.builder(
+                shrinkWrap: true,
+                physics: ClampingScrollPhysics(),
+                itemCount: verseProvider.allBookmark.length,
+                itemBuilder: (context, verseIndex) {
+                  VerseModal verse = verseProvider.allBookmark[verseIndex];
+                  return ListTile(
+                    leading: Text(
+                      '${verse.id}',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontFamily: 'Bold',
+                      ),
+                    ),
+                    title: Text(
+                      '${verse.title}',
+                      style: TextStyle(fontSize: 19.0),
+                    ),
+                    trailing: IconButton(
+                      icon: verseProvider.isBookmark(verse)
+                          ? Icon(Icons.bookmark_remove)
+                          : Icon(Icons.bookmark_added_outlined),
+                      onPressed: () {
+                        if (verseProvider.isBookmark(verse)) {
+                          verseProvider.removeFromBookmark(index: verseIndex);
+                        } else {
+                          verseProvider.addToBookmark(verse: verse);
+                        }
+                      },
+                    ),
+                    onTap: () {
+                      Navigator.of(context).pushNamed('VerseEnglishDetail',
+                          arguments: verseIndex);
                     },
-                  ),
-                  onTap: () {
-                    Navigator.of(context)
-                        .pushNamed('VerseEnglishDetail', arguments: verseIndex);
-                  },
-                );
-              },
-            ),
+                  );
+                },
+              ),
+            ],
           );
         },
       ),

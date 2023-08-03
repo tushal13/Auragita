@@ -26,14 +26,14 @@ class VerseController extends ChangeNotifier {
     return allFavorite.contains(verse);
   }
 
-   addToFavorites({required VerseModal verse}) {
+  addToFavorites({required VerseModal verse}) {
     if (!allFavorite.contains(verse)) {
       allFavorite.add(verse);
       notifyListeners();
     }
   }
 
-   removeFromFavorites({required int index}) {
+  removeFromFavorites({required int index}) {
     allFavorite.removeAt(index);
     notifyListeners();
   }
@@ -42,14 +42,14 @@ class VerseController extends ChangeNotifier {
     return allBookmark.contains(verse);
   }
 
-   addToBookmark({required VerseModal verse}) {
+  addToBookmark({required VerseModal verse}) {
     if (!allBookmark.contains(verse)) {
       allBookmark.add(verse);
       notifyListeners();
     }
   }
 
-   removeFromBookmark({required int index}) {
+  removeFromBookmark({required int index}) {
     allBookmark.removeAt(index);
     notifyListeners();
   }

@@ -20,7 +20,6 @@ class _HomePageState extends State<HomePage>
     super.initState();
 
     tabController = TabController(
-      initialIndex: 2,
       length: 4,
       vsync: this,
     );
@@ -29,10 +28,17 @@ class _HomePageState extends State<HomePage>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: NestedScrollView(
-        headerSliverBuilder: (context, value) => [
+      body: CustomScrollView(
+        slivers: [
           SliverAppBar(
-            title: const Text("Auragita"),
+            backgroundColor: Color(0xFFE8E5CE),
+            leading: Image.asset("assets/images/Logo.png"),
+            title: Text(
+              "Auragita",
+              style: TextStyle(fontFamily: 'ReinaNeue', fontSize: 32),
+            ),
+            floating: true,
+            centerTitle: true,
             bottom: TabBar(
               controller: tabController,
               tabs: const [
@@ -51,16 +57,18 @@ class _HomePageState extends State<HomePage>
               ],
             ),
           ),
+          SliverFillRemaining(
+            child: TabBarView(
+              controller: tabController,
+              children: [
+                ChapterView(),
+                VerseView(),
+                FavoritePage(),
+                BookmarkPage(),
+              ],
+            ),
+          ),
         ],
-        body: TabBarView(
-          controller: tabController,
-          children: [
-            ChapterView(),
-            VerseView(),
-            FavoritePage(),
-            BookmarkPage(),
-          ],
-        ),
       ),
     );
   }
